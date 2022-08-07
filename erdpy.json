@@ -1,0 +1,24 @@
+{
+    "configurations": {
+        "default": {
+            "proxy": "https://devnet-api.elrond.com",
+            "chainID": "D"
+        }
+    },
+    "contract":{
+        "deploy":{
+            "verbose": true,
+            "bytecode": "output/shuffle.wasm",
+            "recall-nonce": true,
+            "pem": "../wallet.pem",
+            "gas-limit": 60000000,
+            "arguments": [
+                "str:FACES-dd0aec"
+            ],
+            "send": true,
+            "outfile": "shuffle.json"
+        }
+     }
+}
+
+
