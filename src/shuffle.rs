@@ -52,7 +52,7 @@ fn begin_shuffle(&self) {
     require!(self.game_begin().get() == false, "Cannot shuffle, already shuffled");
 
     for user in self.user_list().iter() {
-        let rand_nr = rand_source.next_usize_in_range(0usize,index_number);
+        let rand_nr = rand_source.next_usize_in_range(1usize,index_number);
             self.new_store_index(&user).set(rand_nr);
     }
     self.game_begin().set(true);
